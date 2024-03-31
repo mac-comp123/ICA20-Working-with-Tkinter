@@ -1,8 +1,8 @@
-
 import tkinter as tk
 import PIL
 import PIL.Image as Image
 import PIL.ImageTk as ImageTk
+
 
 class BasicGUI3:
     """An object containing a GUI program that asks the user a question"""
@@ -37,12 +37,10 @@ class BasicGUI3:
         # will be triggered.
         self.userInputEntry.bind("<Return>", self.respond)
         self.userInputEntry.bind("<Tab>", self.respond)
-        
-                
+
     def go(self):
         """Takes no inputs, and calls the root windows main loop to run the GUI"""
         self.rootWin.mainloop()
-
 
     def respond(self, event):
         """Takes an event object as input, and is the callback for the user's input
@@ -56,8 +54,9 @@ class BasicGUI3:
         else:
             self.userInputEntry.insert(0, "no")
             self.frame['bg'] = 'Blue'
-        
 
-# --- here it goes...
-myGui = BasicGUI3()
-myGui.go()
+
+if __name__ == '__main__':
+    # --- here it goes...
+    myGui = BasicGUI3()
+    myGui.go()

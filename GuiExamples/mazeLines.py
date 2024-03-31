@@ -1,10 +1,8 @@
-
 import tkinter as tk
 
 
 class MazeLines:
     """Draws lines for a maze on a canvas. Quits when user types q."""
-
     def __init__(self):
         self.main = tk.Tk()
         self.main.bind('q', self.quit)
@@ -28,5 +26,7 @@ class MazeLines:
     def quit(self, event):
         self.main.destroy()
 
-ml = MazeLines()
-ml.go()
+
+if __name__ == '__main__':
+    ml = MazeLines()
+    ml.go()

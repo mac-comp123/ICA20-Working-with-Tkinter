@@ -1,5 +1,3 @@
-
-
 from tkinter import messagebox
 
 
@@ -7,8 +5,8 @@ from tkinter import messagebox
 import tkinter as tk
 from tkinter import simpledialog, ttk
 
-class DialogTester:
 
+class DialogTester:
     def __init__(self):
         self.main = tk.Tk()
 
@@ -28,7 +26,6 @@ class DialogTester:
         self.showAge.grid(row = 1, column = 1, padx=10, pady=10)
         self.showWage = ttk.Label(self.main, text="")
         self.showWage.grid(row = 1, column = 2, padx=10, pady=10)
-
 
     def run(self):
         self.main.mainloop()
@@ -69,7 +66,8 @@ class DialogTester:
         print("askretrycancel answer:", ans7)
 
 
-myDiagTest = DialogTester()
-myDiagTest.run()
+if __name__ == '__main__':
+    myDiagTest = DialogTester()
+    myDiagTest.run()
 
 

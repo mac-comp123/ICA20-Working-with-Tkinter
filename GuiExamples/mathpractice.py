@@ -29,7 +29,6 @@ class MathGUI:
         self.easyCheck = None  # Will be defined later
         self.hardCheck = None  # Will be defined later
 
-
     def createWidgets(self):
         #################### build GUI ##############################        
         self.root.title('Math Practice')
@@ -50,7 +49,6 @@ class MathGUI:
         subCheck.grid(row=1, column=1)
         addCheck.select()
         subCheck.deselect()
-
 
         # Stuff for selecting difficulty level
         label_2 = tk.LabelFrame(master=self.root, text='Difficulty level', padx=20,
@@ -118,7 +116,6 @@ class MathGUI:
 
     def goProgram(self):
         self.root.mainloop()
-
 
     def nextProb(self):
         self.val1Var.set("")
@@ -202,16 +199,15 @@ class MathGUI:
         self.totalVar.set(0)
     # end resetCount
     
-            
-        
-   
-        
+
 def main():
     s = MathGUI()
     s.createWidgets()
     s.goProgram()
     print('back to main')
 # end main
-        
-        
-main()
+
+
+if __name__ == '__main__':
+
+    main()

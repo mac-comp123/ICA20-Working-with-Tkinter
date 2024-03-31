@@ -1,9 +1,8 @@
-
 import tkinter as tk
 import random
 
-class CanvasGUI2:
 
+class CanvasGUI2:
     def __init__(self):
         self.rootWin = tk.Tk()
         self.rootWin.title("Second Canvas example")
@@ -46,9 +45,7 @@ class CanvasGUI2:
             nextDict['yDist'] = deltaY
             nextDict['moving'] = True
             self.ballCollection[nextBall] = nextDict
-        
-        
-        
+
     def go(self):
         """Takes no inputs, and runs its own loop for the GUI.  This is so we can move 
         the balls without waiting for some user input."""
@@ -59,8 +56,6 @@ class CanvasGUI2:
                 self.rootWin.update() # process events
         except tk.TclError:
             pass # to avoid errors when the window is closed
-
-        
 
     def moveAllBalls(self):
         """Takes no inputs, and moves the balls in the ball list.  It bounces
@@ -74,12 +69,10 @@ class CanvasGUI2:
                 if y1 >= 500 or y0 <= 5:
                     ballInfo['yDist'] = - ballInfo['yDist']
                 self.canvas.move(ballId, ballInfo['xDist']/5, ballInfo['yDist']/5)
-             
-                
+
     # --------------------------------------------------------------------------
     # Below here are the callback methods for the canvas to respond to mouse 
     # and key inputs
-
     def chooseBall(self, event):
         """Called when the user clicks on the canvas, this determines if there is a
         ball currently selected or not. If there is a selected ball, then it "unselects" it
@@ -97,9 +90,6 @@ class CanvasGUI2:
             self.selectedBall = ballSet[0]
             ballInfo = self.ballCollection[self.selectedBall]
             ballInfo['moving'] = False
-            
-            
-
         
     def moveBallUp(self, event):
         """Callback function that is triggered by the user typing the up arrow. It checks if any ball
@@ -128,7 +118,7 @@ class CanvasGUI2:
 # end of class CanvasGUI
 
 
-# --- here it goes...
-
-myGui = CanvasGUI2()
-myGui.go()
+if __name__ == '__main__':
+    # --- here it goes...
+    myGui = CanvasGUI2()
+    myGui.go()

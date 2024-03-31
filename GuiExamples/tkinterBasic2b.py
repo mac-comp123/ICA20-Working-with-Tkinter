@@ -1,6 +1,6 @@
-
 import tkinter as tk
 from tkinter import ttk    # makes buttons look like OS
+
 
 class FrameExample:
     def __init__(self):
@@ -31,6 +31,6 @@ class FrameExample:
         self.rootWin.mainloop()
 
 
-
-frameGui = FrameExample()
-frameGui.run()
+if __name__ == '__main__':
+    frameGui = FrameExample()
+    frameGui.run()

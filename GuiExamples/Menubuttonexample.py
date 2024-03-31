@@ -1,10 +1,7 @@
-
-
 import tkinter as tk
 
 
 class MenuGUI:
-
     def __init__(self):
         self.boss = tk.Tk()
 
@@ -19,7 +16,6 @@ class MenuGUI:
         self.button.grid(row=0, column=1)
         self.boss.bind("<Return>", self.checkMenu)
 
-
     def checkMenu(self, event):
         value = self.select.get()
         print(value)
@@ -29,6 +25,7 @@ class MenuGUI:
         self.boss.mainloop()
 
 
-mg = MenuGUI()
-mg.go()
+if __name__ == '__main__':
+    mg = MenuGUI()
+    mg.go()
 

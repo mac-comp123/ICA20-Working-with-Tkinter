@@ -3,7 +3,6 @@ from tkinter import ttk
 
 
 class BasicGUI2:
-    
     def __init__(self):
         self.rootWin = tk.Tk()
         self.rootWin.title("Second example")
@@ -42,8 +41,6 @@ class BasicGUI2:
         label20.grid(row = 2, column = 0)
         label21.grid(row = 2, column = 1)
         label22.grid(row = 2, column = 2)
-        
-        
 
     # This method just calls the root window's method for starting everything
     # running.  There are other ways in later examples for running the GUI
@@ -56,7 +53,7 @@ class BasicGUI2:
         self.rootWin.destroy()
 
 
-# --- here it goes...
-
-myGui = BasicGUI2()
-myGui.go()
+if __name__ == '__main__':
+    # --- here it goes...
+    myGui = BasicGUI2()
+    myGui.go()
